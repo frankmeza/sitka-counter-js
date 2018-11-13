@@ -1,9 +1,11 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import logo from './logo.svg'
+import './App.css'
+
+import { connect } from "react-redux"
 
 class App extends Component {
-  render() {
+    render() {
     return (
       <div className="App">
         <header className="App-header">
@@ -21,8 +23,11 @@ class App extends Component {
           </a>
         </header>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default connect(state => {
+    debugger
+    return state
+})(App)
